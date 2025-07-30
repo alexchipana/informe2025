@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Económico de Bolivia 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            color: #880000; /* Color de Fundación Milenio */
+        }
+        .chart-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #880000; /* Color de Fundación Milenio */
+            color: white;
+        }
+        a {
+            color: #880000; /* Color de Fundación Milenio */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #880000; /* Color de Fundación Milenio */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-btn:hover {
+            background-color: #660000;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        @media (max-width: 600px) {
+            .chart-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Informe Económico Integral de Bolivia 2025</h1>
+    
+
+    <div class="section">
+        <h2>1. Introducción</h2>
+        <p>Este informe económico integral para Bolivia en la gestión 2025, inspirado en la estructura del <em>Informe de Milenio sobre la Economía de Bolivia 2024</em> de Fundación Milenio, presenta un análisis detallado basado en datos actualizados hasta julio de 2025, con series históricas desde 2015. Se priorizan fuentes oficiales como el Banco Central de Bolivia (BCB), el Instituto Nacional de Estadística (INE), el Fondo Monetario Internacional (FMI), el Banco Mundial (BM), la Comisión Económica para América Latina y el Caribe (CEPAL), y el Banco Interamericano de Desarrollo (BID). El informe incluye un dashboard interactivo con visualizaciones de indicadores clave, comparaciones con países vecinos, indicadores sociales (pobreza, desigualdad), y el impacto de las elecciones generales de agosto de 2025. Las referencias están citadas con enlaces vivos que dirigen a las fuentes originales, y los datos están disponibles en formatos descargables (Excel, CSV) para facilitar el análisis de los economistas coautores.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Panorama General</h2>
+        <p>Bolivia enfrenta un panorama económico complejo en 2025, con un crecimiento modesto, alta inflación y desafíos estructurales. Según el FMI, el crecimiento del PIB real se proyecta en 1.1%, una mejora frente al 0.73% de 2024 reportado por el INE, pero significativamente menor al promedio de 3.3% entre 2015 y 2023 (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>; <a href="https://www.ine.gob.bo/index.php/en-2024-la-economia-boliviana-crecio-en-073/">INE, 2025</a>). El PIB nominal se estima en USD 50,600 millones, con un PIB per cápita de USD 4,150, frente a USD 3,715 en 2023 (<a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=BO">Banco Mundial, 2025</a>). La inflación, impulsada por la escasez de divisas, costos de importación y bloqueos viales, alcanzó el 10% a finales de 2024 y se proyecta en 15.1% para 2025 (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</p>
+
+        <h3>2.1. Comparación con Países Vecinos</h3>
+        <p>Bolivia muestra un desempeño económico más débil frente a sus vecinos en 2025:</p>
+        <ul>
+            <li><strong>Perú</strong>: Crecimiento del PIB real de 2.5%, beneficiado por exportaciones de cobre y mayor diversificación económica (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Chile</strong>: Crecimiento de 2.1%, con reservas internacionales de USD 40,000 millones y una economía minera estable (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Brasil</strong>: Crecimiento de 2.2%, con reservas de USD 350,000 millones y una economía diversificada (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Paraguay</strong>: Crecimiento de 3.8%, impulsado por la agroindustria y políticas fiscales equilibradas (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+        </ul>
+
+        <h3>2.2. Contexto Internacional</h3>
+        <p>El contexto global afecta a Bolivia:</p>
+        <ul>
+            <li><strong>China</strong>: La desaceleración reduce la demanda de zinc y soya (<a href="https://www.worldbank.org/en/country/bolivia/overview">Banco Mundial, 2025</a>).</li>
+            <li><strong>EE.UU.</strong>: Altas tasas de interés encarecen el financiamiento externo (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Guerra Ucrania-Rusia</strong>: Eleva precios de energía y alimentos, contribuyendo a la inflación (<a href="https://www.coface.com/News-Publications/News/Bolivia-Country-File-Economic-Risk-Analysis">Coface, 2025</a>).</li>
+            <li><strong>Precios de commodities</strong>: La caída en los precios del gas natural reduce ingresos, mientras que el oro ofrece beneficios marginales (<a href="https://www.focus-economics.com/countries/bolivia">FocusEconomics, 2023</a>).</li>
+        </ul>
+
+        <h3>2.3. Principales Shocks</h3>
+        <ul>
+            <li><strong>Pandemia de COVID-19 (2020)</strong>: Contracción del PIB de -8.7% (<a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial, 2025</a>).</li>
+            <li><strong>Caída de exportaciones de gas</strong>: De USD 6.1 mil millones en 2014 a USD 2.23 mil millones en 2021 (<a href="https://en.wikipedia.org/wiki/Economy_of_Bolivia">Wikipedia, 2024</a>).</li>
+            <li><strong>Bloqueos viales (2024)</strong>: Han restringido la actividad económica y exacerbado la inflación (<a href="https://apnews.com/article/bolivia-economy-crisis-arce-morales-election-dollars-1a3b08eecf4a7c6f0a8c07c0be24a0be">AP News, 2024</a>).</li>
+            <li><strong>Escasez de divisas</strong>: Brecha cambiaria del 120% en 2025 (<a href="https://www.coface.com/News-Publications/News/Bolivia-Country-File-Economic-Risk-Analysis">Coface, 2025</a>).</li>
+        </ul>
+
+        <div class="chart-container">
+            <canvas id="pibChart"></canvas>
+        </div>
+        <table>
+            <tr>
+                <th>Año</th>
+                <th>Crecimiento PIB Real (%)</th>
+                <th>Fuente</th>
+            </tr>
+            <tr><td>2015</td><td>4.9</td><td><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial</a></td></tr>
+            <tr><td>2016</td><td>4.3</td><td><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial</a></td></tr>
+            <tr><td>2017</td><td>4.2</td><td><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial</a></td></tr>
+            <tr><td>2018</td><td>4.1</td><td><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial</a></td></tr>
+            <tr><td>2019</td><td>2.8</td><td><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial</a></td></tr>
+            <tr><td>2020</td><td>-8.7</td><td><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial</a></td></tr>
+            <tr><td>2021</td><td>6.1</td><td><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial</a></td></tr>
+            <tr><td>2022</td><td>3.9</td><td><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial</a></td></tr>
+            <tr><td>2023</td><td>2.6</td><td><a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?locations=BO">Banco Mundial</a></td></tr>
+            <tr><td>2024</td><td>0.73</td><td><a href="https://www.ine.gob.bo/index.php/en-2024-la-economia-boliviana-crecio-en-073/">INE</a></td></tr>
+            <tr><td>2025</td><td>1.1 (Proyección)</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>3. Sector Externo</h2>
+        <p>El sector externo enfrenta una crisis de balanza de pagos, con reservas internacionales críticamente bajas y un déficit comercial persistente. Según el FMI, las proyecciones para 2025 son:</p>
+        <ul>
+            <li><strong>Exportaciones</strong>: 18.0% del PIB (USD 9,108 millones), lideradas por gas natural (2.3% del PIB), oro, zinc y soya. La caída en la producción de gas, debido a la diversificación energética de Argentina y Brasil, limita los ingresos (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Importaciones</strong>: 20.4% del PIB (USD 10,322 millones), impulsadas por combustibles (26.4%) y bienes manufacturados (64.8%) (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Déficit comercial</strong>: -2.4% del PIB, exacerbado por restricciones de divisas (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Balanza de pagos</strong>: Cuenta corriente con déficit de -2.6% del PIB; cuenta de capital y financiera con saldo neto de -2.8% (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Reservas internacionales netas (RIN)</strong>: USD 2,118 millones (3.8% del PIB, 2.0 meses de importaciones), frente a USD 1,980 millones en diciembre 2024 (USD 47 millones en efectivo, USD 1,890 millones en oro) (<a href="https://www.coface.com/News-Publications/News/Bolivia-Country-File-Economic-Risk-Analysis">Coface, 2025</a>).</li>
+            <li><strong>Inversión Extranjera Directa (IED)</strong>: Neta de -0.2% del PIB, indicando salidas de inversión por incertidumbre política (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Tipo de cambio</strong>: La brecha con el mercado paralelo alcanzó el 120% en 2025, generando presiones inflacionarias (<a href="https://www.coface.com/News-Publications/News/Bolivia-Country-File-Economic-Risk-Analysis">Coface, 2025</a>).</li>
+        </ul>
+
+        <h3>3.1. Comparación con Países Vecinos</h3>
+        <ul>
+            <li><strong>Perú</strong>: Superávit comercial de 1.5% del PIB, con exportaciones de cobre al 30% (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Chile</strong>: Reservas de USD 40,000 millones y exportaciones mineras estables (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Brasil</strong>: Déficit de cuenta corriente de -1.2% del PIB, con reservas de USD 350,000 millones (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+        </ul>
+
+        <div class="chart-container">
+            <canvas id="balanzaChart"></canvas>
+        </div>
+        <table>
+            <tr>
+                <th>Indicador</th>
+                <th>Valor 2025 (Proyección)</th>
+                <th>Fuente</th>
+            </tr>
+            <tr><td>Exportaciones (% PIB)</td><td>18.0</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>Importaciones (% PIB)</td><td>20.4</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>Reservas Internacionales (USD millones)</td><td>2,118</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>Cuenta Corriente (% PIB)</td><td>-2.6</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>IED Neta (% PIB)</td><td>-0.2</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>4. Gestión Fiscal</h2>
+        <p>La gestión fiscal muestra un deterioro significativo, según el FMI:</p>
+        <ul>
+            <li><strong>Ingresos</strong>: 24.8% del PIB, con ingresos por hidrocarburos en 1.9% del PIB, afectados por la caída en exportaciones de gas (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Gastos</strong>: 37.5% del PIB, impulsados por subsidios a combustibles (4.0% del PIB) y gastos preelectorales (<a href="https://www.coface.com/News-Publications/News/Bolivia-Country-File-Economic-Risk-Analysis">Coface, 2025</a>).</li>
+            <li><strong>Déficit fiscal</strong>: 12.7% del PIB, frente a 10% en 2023-2024 (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Financiamiento</strong>: Interno vía BCB y bonos comprados por fondos de pensiones (35% de la deuda es interna); externo con préstamos concesionales de FMI, CAF, BM (<a href="https://www.coface.com/News-Publications/News/Bolivia-Country-File-Economic-Risk-Analysis">Coface, 2025</a>).</li>
+            <li><strong>Deuda pública</strong>: 90.4% del PIB (USD 45,742 millones), frente to 80.8% en 2023. El 92% de la deuda está en dólares, aumentando la vulnerabilidad (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+        </ul>
+
+        <h3>4.1. Comparación con Países Vecinos</h3>
+        <ul>
+            <li><strong>Perú</strong>: Deuda pública de 33% del PIB, con acceso a mercados internacionales (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Chile</strong>: Deuda de 38% del PIB, con calificación crediticia A (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Brasil</strong>: Deuda de 85% del PIB, pero con mayor capacidad de financiamiento (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+        </ul>
+
+        <div class="chart-container">
+            <canvas id="deficitChart"></canvas>
+        </div>
+        <table>
+            <tr>
+                <th>Indicador</th>
+                <th>Valor 2025 (Proyección)</th>
+                <th>Fuente</th>
+            </tr>
+            <tr><td>Déficit Fiscal (% PIB)</td><td>12.7</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>Deuda Pública (% PIB)</td><td>90.4</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>5. Gestión Monetaria</h2>
+        <p>El BCB enfrenta presiones para estabilizar la economía en un contexto de alta inflación y bajas reservas:</p>
+        <ul>
+            <li><strong>Política monetaria</strong>: Políticas restrictivas, pero limitadas por la escasez de divisas. El FMI recomienda mayor flexibilidad en tasas y eliminar el financiamiento monetario del déficit (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Emisión monetaria</strong>: Sin datos específicos, pero significativa para financiar el déficit (<a href="https://www.bcb.gob.bo/?q=ipm">BCB, 2025</a>).</li>
+            <li><strong>Inflación</strong>: 15.1% promedio, 15.6% a fin de año, impulsada por costos de importación y bloqueos (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Tasas de interés</strong>: Se espera que permanezcan bajas para estimular el crecimiento (<a href="https://www.focus-economics.com/countries/bolivia">FocusEconomics, 2023</a>).</li>
+            <li><strong>Reservas</strong>: USD 2,118 millones, insuficientes para el tipo de cambio fijo (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+        </ul>
+
+        <h3>5.1. Comparación con Países Vecinos</h3>
+        <ul>
+            <li><strong>Perú</strong>: Inflación de 2.5%, con reservas adecuadas (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Chile</strong>: Inflación de 3.0%, con política monetaria independiente (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Brasil</strong>: Inflación de 4.2%, con reservas robustas (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+        </ul>
+
+        <div class="chart-container">
+            <canvas id="inflacionChart"></canvas>
+        </div>
+        <table>
+            <tr>
+                <th>Indicador</th>
+                <th>Valor 2025 (Proyección)</th>
+                <th>Fuente</th>
+            </tr>
+            <tr><td>Inflación Media (%)</td><td>15.1</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>Reservas (USD millones)</td><td>2,118</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>6. Sistema Financiero</h2>
+        <p>El sistema financiero enfrenta tensiones por la escasez de divisas y riesgos de liquidez:</p>
+        <ul>
+            <li><strong>Depósitos y crédito</strong>: Crédito al sector privado crece un 7.5% (63.9% del PIB), con dinero en circulación al 85.7% del PIB (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Crisis recientes</strong>: La quiebra del Banco Fassil en 2023 afectó la confianza, con impactos persistentes (<a href="https://www.focus-economics.com/countries/bolivia">FocusEconomics, 2023</a>).</li>
+            <li><strong>Cambios regulatorios</strong>: Reducción de encajes en moneda extranjera en 2023, pero aumento en bolivianos, generando problemas de liquidez (<a href="https://www.bcb.gob.bo/?q=ipm">BCB, 2025</a>).</li>
+        </ul>
+
+        <h3>6.1. Comparación con Países Vecinos</h3>
+        <ul>
+            <li><strong>Perú</strong>: Mora bancaria inferior al 3%, con sistema sólido (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Chile</strong>: Sector financiero estable, con alta capitalización (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Brasil</strong>: Mayor diversificación, pero con desafíos en mora (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. Sectores Clave</h2>
+        <ul>
+            <li><strong>Hidrocarburos</strong>: Producción de gas en declive, con exportaciones en 2.3% del PIB. Subsidios a combustibles (4.0% del PIB) y déficit energético persisten (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Minería</strong>: Oro y zinc son clave, pero enfrentan problemas legales y de inversión (<a href="https://gfmag.com/countries/bolivia-gdp-economic-data/">Global Finance, 2024</a>).</li>
+            <li><strong>Agroindustria</strong>: Exportaciones de soya afectadas por restricciones climáticas y controles (<a href="https://www.wfp.org/countries/bolivia">WFP, 2025</a>).</li>
+            <li><strong>Industria manufacturera</strong>: Contribuye el 10.3% al PIB, con crecimiento limitado (<a href="https://gfmag.com/countries/bolivia-gdp-economic-data/">Global Finance, 2024</a>).</li>
+            <li><strong>Energía y alimentos</strong>: Subsidios energéticos y alzas en precios de alimentos contribuyen a la inflación (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+        </ul>
+
+        <h3>7.1. Comparación con Países Vecinos</h3>
+        <ul>
+            <li><strong>Perú</strong>: Minería (cobre) al 14% del PIB, con alta productividad (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Chile</strong>: Minería eficiente, con exportaciones estables (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+            <li><strong>Brasil</strong>: Agroindustria diversificada, líder en soya (<a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI, 2025</a>).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>8. Mercado Laboral y Hogares</h2>
+        <ul>
+            <li><strong>Tasa de empleo y desempleo</strong>: Tasa de desempleo urbano de 3.86% en 2025, pero con aumento de subempleo (<a href="https://www.ine.gob.bo/">INE, 2025</a>). Histórico: 4.0% (2015), 4.5% (2019), 8.0% (2020), 5.0% (2021).</li>
+            <li><strong>Informalidad laboral</strong>: 80% de la fuerza laboral, limitando ingresos fiscales (<a href="https://www.state.gov/countries-areas/bolivia/">U.S. Department of State, 2024</a>).</li>
+            <li><strong>Ingresos laborales promedio</strong>: Sin datos específicos, pero el ingreso per cápita real ha disminuido por la inflación (<a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=BO">Banco Mundial, 2025</a>).</li>
+            <li><strong>Indicadores sociales</strong>:
+                <ul>
+                    <li><strong>Pobreza</strong>: 36.3% en pobreza moderada, 11% en extrema pobreza en 2025 (<a href="https://www.wfp.org/countries/bolivia">WFP, 2025</a>).</li>
+                    <li><strong>Índice de Gini</strong>: 0.42 en 2021, indicando alta desigualdad (<a href="https://data.worldbank.org/indicator/SI.POV.GINI?locations=BO">Banco Mundial, 2025</a>).</li>
+                    <li><strong>Índice de Desarrollo Humano (IDH)</strong>: 0.703 en 2018, clasificando a Bolivia como de "alto desarrollo humano" (<a href="https://hdr.undp.org/data-center/country-insights#/ranks">UNDP, 2025</a>).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>8.1. Comparación con Países Vecinos</h3>
+        <ul>
+            <li><strong>Perú</strong>: Pobreza del 25%, IDH de 0.777 (<a href="https://data.worldbank.org/indicator/SI.POV.NAHC?locations=PE">Banco Mundial, 2025</a>).</li>
+            <li><strong>Chile</strong>: Pobreza del 8%, IDH de 0.855 (<a href="https://data.worldbank.org/indicator/SI.POV.NAHC?locations=CL">Banco Mundial, 2025</a>).</li>
+            <li><strong>Brasil</strong>: Pobreza del 20%, IDH de 0.760 (<a href="https://data.worldbank.org/indicator/SI.POV.NAHC?locations=BR">Banco Mundial, 2025</a>).</li>
+        </ul>
+
+        <div class="chart-container">
+            <canvas id="desempleoChart"></canvas>
+        </div>
+        <table>
+            <tr>
+                <th>Indicador</th>
+                <th>Valor 2025</th>
+                <th>Fuente</th>
+            </tr>
+            <tr><td>Tasa de Desempleo Urbano (%)</td><td>3.86</td><td><a href="https://www.ine.gob.bo/">INE</a></td></tr>
+            <tr><td>Pobreza (% población)</td><td>36.3</td><td><a href="https://www.wfp.org/countries/bolivia">WFP</a></td></tr>
+            <tr><td>Índice de Gini</td><td>0.42 (2021)</td><td><a href="https://data.worldbank.org/indicator/SI.POV.GINI?locations=BO">Banco Mundial</a></td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>9. Elecciones 2025 y Contexto Político</h2>
+        <p>Las elecciones generales del 17 de agosto de 2025 han generado alta incertidumbre. El Movimiento al Socialismo (MAS) está dividido entre la facción moderada de Luis Arce y los seguidores de Evo Morales, quien fundó el partido Evo Pueblo tras ser inhabilitado para postularse por el Tribunal Constitucional en 2023. La desaprobación de Arce alcanzó el 80% en 2025, impulsada por la crisis económica, escasez de divisas y protestas. Un intento de golpe de Estado fallido en junio de 2024 y bloqueos viales han exacerbado la inestabilidad, limitando la implementación de reformas económicas (<a href="https://www.coface.com/News-Publications/News/Bolivia-Country-File-Economic-Risk-Analysis">Coface, 2025</a>; <a href="https://apnews.com/article/bolivia-economy-crisis-arce-morales-election-dollars-1a3b08eecf4a7c6f0a8c07c0be24a0be">AP News, 2024</a>).</p>
+    </div>
+
+    <div class="section">
+        <h2>10. Escenarios y Perspectivas 2025</h2>
+        <p>Las proyecciones para 2025, según el FMI, incluyen:</p>
+        <table>
+            <tr>
+                <th>Indicador</th>
+                <th>Proyección 2025</th>
+                <th>Fuente</th>
+            </tr>
+            <tr><td>Crecimiento del PIB real</td><td>1.1%</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>Inflación (media)</td><td>15.1%</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>Exportaciones (% PIB)</td><td>18.0%</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>Deuda pública (% PIB)</td><td>90.4%</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+            <tr><td>Balanza corriente (% PIB)</td><td>-2.6%</td><td><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI</a></td></tr>
+        </table>
+
+        <h3>10.1. Riesgos Macroeconómicos y Políticos</h3>
+        <ul>
+            <li>Escasez de divisas y presión sobre el tipo de cambio fijo (<a href="https://www.coface.com/News-Publications/News/Bolivia-Country-File-Economic-Risk-Analysis">Coface, 2025</a>).</li>
+            <li>Alta inflación y aumento de la pobreza (<a href="https://www.wfp.org/countries/bolivia">WFP, 2025</a>).</li>
+            <li>Inestabilidad política preelectoral, con posibles protestas (<a href="https://apnews.com/article/bolivia-economy-crisis-arce-morales-election-dollars-1a3b08eecf4a7c6f0a8c07c0be24a0be">AP News, 2024</a>).</li>
+        </ul>
+
+        <h3>10.2. Posibles Medidas de Política Pública</h3>
+        <ul>
+            <li><strong>Fiscal</strong>: Reducir subsidios a combustibles, racionalizar el gasto público y aumentar ingresos fiscales (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Monetaria</strong>: Flexibilizar tasas de interés y eliminar financiamiento monetario del déficit (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Cambiaria</strong>: Ajuste del tipo de cambio para reducir la brecha con el mercado paralelo (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</li>
+            <li><strong>Estructurales</strong>: Fomentar inversión privada y diversificación económica (<a href="https://www.worldbank.org/en/country/bolivia/overview">Banco Mundial, 2025</a>).</li>
+        </ul>
+
+        <h3>10.3. Negociación con el FMI</h3>
+        <p>Bolivia está en discusiones bajo la Consulta del Artículo IV de 2025. Un programa de Facilidad Extendida (EFF) podría apoyar la estabilización, pero enfrenta resistencia política por posibles ajustes (<a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI, 2025</a>).</p>
+    </div>
+
+    <div class="section">
+        <h2>11. Conclusión</h2>
+        <p>Bolivia en 2025 enfrenta una economía frágil, con un crecimiento del PIB real de 1.1%, alta inflación (15.1%) y una deuda pública del 90.4% del PIB. La crisis de balanza de pagos, con reservas de USD 2,118 millones, y la inestabilidad política preelectoral son riesgos clave. Comparada con países vecinos, Bolivia muestra menor crecimiento y mayor vulnerabilidad. Las elecciones de agosto 2025 podrían retrasar reformas, mientras que un programa con el FMI ofrece una vía para la estabilización, aunque con desafíos políticos. El dashboard interactivo facilita el análisis para los economistas coautores, con datos históricos y proyecciones accesibles desde fuentes oficiales.</p>
+    </div>
+
+    <div class="section">
+        <h2>12. Fuentes de Datos</h2>
+        <p>Los datos están disponibles en formatos descargables para análisis detallado:</p>
+        <ul>
+            <li><a href="https://www.imf.org/en/Publications/WEO/weo-database/2025/April">FMI - World Economic Outlook Database</a>: Excel/CSV con PIB, inflación, balanza comercial.</li>
+            <li><a href="https://data.worldbank.org/indicator?tab=all">Banco Mundial - World Development Indicators</a>: Excel/CSV con PIB, pobreza, IDH.</li>
+            <li><a href="https://www.ine.gob.bo/">INE - Instituto Nacional de Estadística</a>: Excel/CSV con empleo, comercio exterior.</li>
+            <li><a href="https://www.bcb.gob.bo/">BCB - Banco Central de Bolivia</a>: Excel/CSV con reservas, política monetaria.</li>
+            <li><a href="https://www.cepal.org/es">CEPAL - Datos y Estadísticas</a>: Series históricas en Excel/CSV.</li>
+            <li><a href="https://www.iadb.org/es">BID - Datos</a>: Indicadores sociales y económicos.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>13. Referencias</h2>
+        <ol>
+            <li><a href="https://fundacion-milenio.org/download/14962/?tmstv=1753408075">Fundación Milenio. (2024). Informe de Milenio sobre la Economía de Bolivia 2024.</a></li>
+            <li><a href="https://www.imf.org/en/Publications/CR/Issues/2025/06/01/Bolivia-2025-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-550868">FMI. (2025). Bolivia: 2025 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Bolivia.</a></li>
+            <li><a href="https://www.worldbank.org/en/country/bolivia/overview">Banco Mundial. (2025). Bolivia Overview: Development news, research, data.</a></li>
+            <li><a href="https://www.ine.gob.bo/index.php/en-2024-la-economia-boliviana-crecio-en-073/">INE. (2025). En 2024 la economía boliviana creció en 0.73%.</a></li>
+            <li><a href="https://www.bcb.gob.bo/?q=ipm">BCB. (2025). Informe de Política Monetaria Enero 2025.</a></li>
+            <li><a href="https://www.cepal.org/es">CEPAL. (2025). Datos y Estadísticas.</a></li>
+            <li><a href="https://www.iadb.org/es">BID. (2025). Datos.</a></li>
+            <li><a href="https://www.focus-economics.com/countries/bolivia">FocusEconomics. (2023). Bolivia Economy: GDP, Inflation, CPI & Interest Rates.</a></li>
+            <li><a href="https://www.americasquarterly.org/article/bolivias-economy-on-the-brink/">Americas Quarterly. (2024). Bolivia's Economy on the Brink.</a></li>
+            <li><a href="https://www.lloydsbanktrade.com/en/market-potential/bolivia/economic-context">Lloyds Bank. (2020). Economic Outline of Bolivia.</a></li>
+            <li><a href="https://www.coface.com/News-Publications/News/Bolivia-Country-File-Economic-Risk-Analysis">Coface. (2025). Bolivia: Country File, Economic Risk Analysis.</a></li>
+            <li><a href="https://www.fitchsolutions.com/country-risk/bolivias-growth-outlook-weighed-down-precarious-external-accounts-16-08-2024">Fitch Solutions. (2024). Bolivia’s Growth Outlook Weighed Down By Precarious External Accounts.</a></li>
+            <li><a href="https://tradingeconomics.com/bolivia/gdp-growth-annual">Trading Economics. (2025). Bolivia GDP Annual Growth Rate.</a></li>
+            <li><a href="https://www.state.gov/countries-areas/bolivia/">U.S. Department of State. (2024). Bolivia.</a></li>
+            <li><a href="https://www.wfp.org/countries/bolivia">World Food Programme. (2025). Plurinational State of Bolivia country strategic plan (2023–2027).</a></li>
+            <li><a href="https://hdr.undp.org/data-center/country-insights#/ranks">UNDP. (2025). Human Development Reports.</a></li>
+            <li><a href="https://gfmag.com/countries/bolivia-gdp-economic-data/">Global Finance. (2024). Bolivia GDP and Economic Data.</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Economy_of_Bolivia">Wikipedia. (2024). Economy of Bolivia.</a></li>
+        </ol>
+    </div>
+
+    <script>
+        // Gráfico de Crecimiento del PIB
+        const pibCtx = document.getElementById('pibChart').getContext('2d');
+        new Chart(pibCtx, {
+            type: 'line',
+            data: {
+                labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                datasets: [{
+                    label: 'Crecimiento PIB Real (%)',
+                    data: [4.9, 4.3, 4.2, 4.1, 2.8, -8.7, 6.1, 3.9, 2.6, 0.73, 1.1],
+                    borderColor: '#880000',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: false }
+                }
+            }
+        });
+
+        // Gráfico de Balanza Comercial
+        const balanzaCtx = document.getElementById('balanzaChart').getContext('2d');
+        new Chart(balanzaCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Exportaciones', 'Importaciones'],
+                datasets: [{
+                    label: 'Balanza Comercial 2025 (% PIB)',
+                    data: [18.0, 20.4],
+                    backgroundColor: ['#880000', '#ff4444']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Gráfico de Déficit Fiscal
+        const deficitCtx = document.getElementById('deficitChart').getContext('2d');
+        new Chart(deficitCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Déficit Fiscal', 'Deuda Pública'],
+                datasets: [{
+                    label: 'Gestión Fiscal 2025 (% PIB)',
+                    data: [12.7, 90.4],
+                    backgroundColor: ['#ff4444', '#880000']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Gráfico de Inflación
+        const inflacionCtx = document.getElementById('inflacionChart').getContext('2d');
+        new Chart(inflacionCtx, {
+            type: 'line',
+            data: {
+                labels: ['2025'],
+                datasets: [{
+                    label: 'Inflación Media (%)',
+                    data: [15.1],
+                    borderColor: '#880000',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Gráfico de Desempleo
+        const desempleoCtx = document.getElementById('desempleoChart').getContext('2d');
+        new Chart(desempleoCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2025'],
+                datasets: [{
+                    label: 'Tasa de Desempleo Urbano (%)',
+                    data: [3.86],
+                    backgroundColor: '#880000'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Función para descargar el archivo HTML
+        function downloadHTML() {
+            const element = document.documentElement.outerHTML;
+            const blob = new Blob([element], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'bolivia_economic_report_2025.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
